@@ -1,0 +1,82 @@
+:root {
+   --main-number-color: #000;
+   --secondary-color: #af2c2c;
+   --ghost-color: rgba(82, 74, 74, 0.5);
+   --start-color: #15ff00;
+   --stop-color: #c10000;
+   --reset-color: #828282;
+   --buttons-text-color: #000000;
+}
+
+* {
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box;
+}
+body {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+   gap: 50px;
+   height: 100vh;
+}
+.timer-container {
+   font-family: "lcd-numbers", "Times New Roman", Times, serif;
+   display: flex;
+}
+.timer-container p {
+   font-size: 70px;
+   color: var(--main-number-color);
+   font-style: italic;
+}
+.timer-container span {
+   display: inline-block;
+   transform: translateX(-30%);
+   color: var(--ghost-color);
+}
+.timer-container b {
+   color: var(--secondary-color);
+}
+
+.buttons-container {
+   display: flex;
+   gap: 20px;
+}
+button {
+   padding: 15px 25px;
+   color: var(--buttons-text-color);
+   border-radius: 5px;
+   font-weight: bold;
+   border: 0;
+   cursor: pointer;
+   transition: all 0.3s;
+}
+#start {
+   background-color: var(--start-color);
+}
+#stop {
+   background-color: var(--stop-color);
+}
+#reset {
+   background-color: var(--reset-color);
+}
+button:hover {
+   transform: translateY(-5%);
+   box-shadow: 0 5px 10px black;
+}
+
+@font-face {
+   font-family: "lcd-numbers";
+   src: url("fonst/DigitTech7-Regular.otf") format("opentype");
+   font-weight: 400;
+   font-style: normal;
+   font-display: swap;
+}
+@font-face {
+   font-family: "lcd-numbers";
+   src: url("fonst/DigitTech7-Italic.otf") format("opentype");
+   font-weight: 400;
+   font-style: italic;
+   font-display: swap;
+}
